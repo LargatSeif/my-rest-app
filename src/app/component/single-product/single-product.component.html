@@ -1,0 +1,21 @@
+<div style="padding-left:10%;padding-right:10%">
+<div class="row" style="padding-top:2%;">
+    <div class="col-md-12"><h2>Smartphone by ORANGE – more details here</h2>
+    </div>
+</div>
+
+<div class="row" >
+  <div class="col-md-6">
+    <img src="../../assets/products/{{product.name|lowercase}}.jpg" alt="{{product.name}} - {{product.id}}">
+  </div>
+  <div class="col-md-6">
+    <h2 class="text-primary">{{ product.name}}</h2>
+    <h2 class=" text-info"  >{{ product.price}} €  </h2>
+    <h4>Description</h4>
+    <p>{{ product.description}}</p>
+
+    <button class="btn btn-block btn-success text-white">Add to cart</button>
+  </div>
+</div>
+
+</div>

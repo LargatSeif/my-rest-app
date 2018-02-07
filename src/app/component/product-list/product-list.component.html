@@ -1,0 +1,11 @@
+  <div class="row" style="padding-top:2%;">
+      <div class="col-md-12"><h2>Smartphone by ORANGE – be always the first</h2>
+      </div>
+  </div>
+  <div class="row" >
+    
+    <div *ngFor="let product of products"  class="col-md-3 col-sm-12 text-center">
+      <app-product [product]= 'product' ></app-product>
+    </div>
+
+  </div>

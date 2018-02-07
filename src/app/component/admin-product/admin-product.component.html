@@ -1,0 +1,31 @@
+<div style="padding-top:5%">
+<h2><a [routerLink]="['/admin']" class="text-primary" >Dashboard</a> <strong>></strong>Products list </h2>
+<div class="userList">
+  <table class="table table-striped">
+      <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Operations</th>
+      </thead>
+      <tbody >
+        <tr *ngFor="let product of products" >
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.price}}</td>
+            <td>
+                <button class="btn btn-block btn-primary" (click)="updateProduct(product)">EDIT</button>
+                <button class="btn btn-block btn-danger" (click)="deleteProduct(product)">DELETE</button>
+            </td>
+        </tr> 
+      </tbody>
+      <tfoot>
+        <tr>
+          <td><button [routerLink]="['/admin/products/new']" routerLinkActive="true"  class="btn btn-success">CREATE PRODUCT</button> </td>
+        </tr>
+      </tfoot>
+  </table>
+</div>
+</div>

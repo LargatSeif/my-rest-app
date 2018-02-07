@@ -1,0 +1,21 @@
+
+<div class="device-preview ">
+    <img class="device-preview" 
+    src="./../assets/products/{{product.name|lowercase}}.jpg"  alt="{{product.name}} - {{product.id}}">
+  </div>
+  <div class="device-data">
+    <h3 >{{ product.name}}</h3>
+     
+    <div class="pricing">
+      <p class="price"><span class="sr-only">sale price </span>{{ product.price}} <span class="currency-euro">€</span></p>
+    </div>
+    <ul>
+      <li>Screen size 5,1"</li>
+      <li>7420 Core 2,4GHz</li>
+      <li>Stockage 64 Go + SlotSD</li>
+      <li>Main camera 16MP</li>
+      <li>{{ product.description|slice:0:44}} ... <a [routerLink]="['/products', product.id]" class="text-info" >More details</a></li>
+    </ul>
+    
+    <button [routerLink]="['/products', product.id]" class="btn btn-info">Details</button>
+  </div>

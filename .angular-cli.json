@@ -19,6 +19,9 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+        "../node_modules/boosted/dist/css/orangeHelvetica.css",
+        "../node_modules/boosted/dist/css/orangeIcons.css",
+        "../node_modules/boosted/dist/css/boosted.css",
         "styles.css"
       ],
       "scripts": [],

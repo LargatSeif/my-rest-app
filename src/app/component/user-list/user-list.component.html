@@ -1,0 +1,32 @@
+<div style="padding-top:5%">
+<h2><a [routerLink]="['/admin']" class="text-primary" >Dashboard </a> <strong>></strong> Customer List </h2>
+
+<div class="userList">
+  <table class="table table-striped">
+      <thead>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Operations</th>
+      </thead>
+      <tbody >
+        <tr *ngFor="let customer of customers" >
+          <td>{{ customer.id }}</td>
+          <td>{{ customer.firstName }}</td>
+          <td>{{ customer.lastName }}</td>
+          <td>{{ customer.email }}</td>
+          <td>    
+            <button class="btn btn-primary" (click)="updateCustomer(customer)">EDIT</button>
+            <button class="btn btn-danger" (click)="deleteCustomer(customer)">DELETE</button>  
+          </td>
+        </tr>      
+      </tbody>
+      <tfoot>
+        <tr>
+          <td><button [routerLink]="['/subscribe']" routerLinkActive="true"  class="btn btn-success">CREATE CUSTOMER</button> </td>
+        </tr>
+      </tfoot>
+  </table>
+</div>
+</div>
